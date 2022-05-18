@@ -4,9 +4,9 @@ import com.example.moviebook.data.repository.DefaultMovieRepository
 import com.example.moviebook.domain.boundary.MovieRepository
 import org.koin.dsl.module
 
-fun repositoryModule() = module {
+val repositoryModule = module {
 
     single {
-        DefaultMovieRepository(get())
+        DefaultMovieRepository(get()) as MovieRepository
     }
 }

@@ -13,11 +13,11 @@ class MovieBookApplication : Application() {
             androidContext(this@MovieBookApplication)
             modules(
                 listOf(
-                   // networkingModule(),
-                    viewModelModule(),
-                  //  repositoryModule(),
-                   // useCaseModule(),
-                   // resourceModule(),
+                    networkingModule,
+                    viewModelModule,
+                    repositoryModule,
+                    useCaseModule,
+                    resourceModule,
                 )
             )
         }

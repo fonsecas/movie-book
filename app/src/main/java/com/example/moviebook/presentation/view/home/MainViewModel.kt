@@ -7,19 +7,22 @@ import com.example.moviebook.domain.entity.Movie
 import com.example.moviebook.domain.interector.GetMovieList
 import com.framework.desafio.android.presentation.util.base.BaseViewModel
 
-class MainViewModel  : BaseViewModel() {
+class MainViewModel constructor(
+    private val getMovieList: GetMovieList
+) : BaseViewModel() {
 
     val users: LiveData<List<Movie?>?> get() = _users
 
     private val _users by lazy { MutableLiveData<List<Movie?>?>() }
 
     init {
-        //getFruitList()
+        getMovieList()
     }
 
-    private fun getFruitList() {
+    private fun getMovieList() {
         launchDataLoad {
-         //   _users.value = getMovieList.execute()
+               _users.value = getMovieList.execute()
+            _users.value
         }
     }
 }

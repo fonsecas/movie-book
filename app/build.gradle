@@ -12,7 +12,8 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
-        buildConfigField "String", "API_ENDPOINT", "\"https://postmanmaster.herokuapp.com/\""
+        buildConfigField "String", "API_ENDPOINT", "\"https://api.themoviedb.org/3/\""
+        buildConfigField "String", "ACCESS_KEY", "\"8f72024179b31532014de08efcc769c2\""
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
