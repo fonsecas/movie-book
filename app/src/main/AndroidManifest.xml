@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieBook">
         <activity
-            android:name=".home.MainActivity"
+            android:name="com.example.moviebook.presentation.view.home.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
