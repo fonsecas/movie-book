@@ -12,6 +12,7 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
+        buildConfigField "String", "API_ENDPOINT", "\"https://postmanmaster.herokuapp.com/\""
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -58,4 +59,9 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.6.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    api "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    api 'com.squareup.okhttp3:logging-interceptor:4.8.1'
 }

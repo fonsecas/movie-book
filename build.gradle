@@ -4,6 +4,7 @@ buildscript {
         koinVersion = '2.0.1'
         kotlinVersion = '1.4.10'
         lifecycleVersion = '2.2.0'
+        retrofitVersion = '2.9.0'
 
     }
 
