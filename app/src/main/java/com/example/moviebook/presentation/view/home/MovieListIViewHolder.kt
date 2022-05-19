@@ -13,12 +13,12 @@ class MovieListIViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(movie: Movie) {
-        binding.name.text = movie.title
+        binding.rate.text = movie.voteAverage.toString()
         binding.tittle.text = movie.originalTitle
         Glide
             .with(binding.root.context)
             .load("https://image.tmdb.org/t/p/original/${movie.posterPath}")
-            .circleCrop()
+            .thumbnail()
             .into(binding.picture)
     }
 
