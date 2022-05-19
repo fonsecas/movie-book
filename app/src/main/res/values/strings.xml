@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Movie Book</string>
+    <string name="title">Contatos</string>
+    <string name="error">Ocorreu um erro. Tente novamente.</string>
     <!--Error Strings-->
     <string name="error_title">Oops!</string>
     <string name="error_unauthorized">Não pudemos completar a operação. Você não está autorizado</string>

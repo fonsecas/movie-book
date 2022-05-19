@@ -5,7 +5,6 @@ import androidx.databinding.DataBindingUtil
 import com.example.moviebook.R
 import com.example.moviebook.databinding.ActivityMainBinding
 import com.example.moviebook.domain.entity.Movie
-import com.example.moviebook.domain.entity.MoviesList
 import com.framework.desafio.android.presentation.util.base.BaseActivity
 import com.framework.desafio.android.presentation.util.base.BaseViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -17,9 +16,13 @@ class MainActivity : BaseActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-            override fun onCreate(savedInstanceState: Bundle?) {
+    private lateinit var adapter: MovieListAdapter
+
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-                binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        setupAdapter()
     }
 
     override fun subscribeUi() {
@@ -27,8 +30,12 @@ class MainActivity : BaseActivity() {
         _viewModel.users.observe(this, ::onMoviesReceived)
     }
 
-    private fun onMoviesReceived(movieList: MoviesList) {
-        val x = movieList
-        x
+    private fun setupAdapter() {
+        adapter = MovieListAdapter()
+        binding.recyclerView.adapter = adapter
+    }
+
+    private fun onMoviesReceived(movieList: List<Movie>) {
+        adapter.submitList(movieList)
     }
 }

@@ -12,9 +12,9 @@ class MainViewModel constructor(
     private val getMovieList: GetMovieList
 ) : BaseViewModel() {
 
-    val users: LiveData<MoviesList> get() = _users
+    val users: LiveData<List<Movie>> get() = _users
 
-    private val _users by lazy { MutableLiveData<MoviesList>() }
+    private val _users by lazy { MutableLiveData<List<Movie>>() }
 
     init {
         getMovieList()
@@ -22,7 +22,9 @@ class MainViewModel constructor(
 
     private fun getMovieList() {
         launchDataLoad(onFailure = ::onFailure) {
-               _users.value = getMovieList.execute()
+               getMovieList.execute().apply {
+                   _users.value =  this?.results
+               }
         }
     }
 
