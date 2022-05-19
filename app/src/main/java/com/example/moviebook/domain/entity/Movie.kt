@@ -3,7 +3,18 @@ package com.example.moviebook.domain.entity
 import java.io.Serializable
 
 data class Movie(
+    val adult: Boolean,
+    val backdropPath: String,
+    val genreIds: List<Int>,
     val id: Int,
-    val img: String,
-    val name: String
+    val originalLanguage: String,
+    val originalTitle: String,
+    val overview: String,
+    val popularity: Double,
+    val posterPath: String,
+    val releaseDate: String?,
+    val title: String,
+    val video: Boolean,
+    val voteAverage: Double,
+    val voteCount: Int
 ) : Serializable
