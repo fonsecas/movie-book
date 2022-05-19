@@ -3,9 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/game/AndroidStudioProjects/MovieBook/app/src/main/res/drawable/ic_baseline_star_rate_24.xml" value="0.1" />
         <entry key="..\:/Users/game/AndroidStudioProjects/MovieBook/app/src/main/res/drawable/rounded_corners.xml" value="0.1" />
         <entry key="..\:/Users/game/AndroidStudioProjects/MovieBook/app/src/main/res/layout/activity_main.xml" value="0.1359375" />
-        <entry key="..\:/Users/game/AndroidStudioProjects/MovieBook/app/src/main/res/layout/list_item_movie.xml" value="0.3037249283667622" />
+        <entry key="..\:/Users/game/AndroidStudioProjects/MovieBook/app/src/main/res/layout/list_item_movie.xml" value="0.17884130982367757" />
         <entry key="..\:/Users/game/AndroidStudioProjects/MovieBook/app/src/main/res/layout/loading_placeholder.xml" value="0.13020833333333334" />
       </map>
     </option>

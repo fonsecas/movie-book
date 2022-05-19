@@ -8,7 +8,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:background="@drawable/rounded_corners"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/spacing_12">
 
         <ImageView
             android:id="@+id/picture"
@@ -23,32 +24,31 @@
             android:id="@+id/tittle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
+            android:layout_marginTop="@dimen/spacing_12"
+            android:textAlignment="center"
+            android:textColor="@color/ice"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/picture"
-            tools:text="\@username"
-            android:textAlignment="center"/>
+            tools:text="\@username" />
 
         <ImageView
             android:layout_width="12dp"
             android:layout_height="12dp"
             android:src="@drawable/ic_baseline_star_rate_24"
+            app:layout_constraintBottom_toBottomOf="@id/rate"
             app:layout_constraintEnd_toStartOf="@id/rate"
             app:layout_constraintTop_toBottomOf="@+id/tittle"
-            app:layout_constraintBottom_toBottomOf="@id/rate"
             app:tint="@color/yellow" />
 
         <TextView
             android:id="@+id/rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
+            android:textColor="@color/ice"
             app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/spacing_4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tittle"
             tools:text="Name Surname" />

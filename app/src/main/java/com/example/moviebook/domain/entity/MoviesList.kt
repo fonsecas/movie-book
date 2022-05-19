@@ -1,6 +1,5 @@
 package com.example.moviebook.domain.entity
 
-import com.example.moviebook.domain.entity.Movie
 import java.io.Serializable
 
 data class MoviesList(

@@ -5,7 +5,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.example.moviebook.domain.entity.Movie
 
-class MovieListAdapter : ListAdapter<Movie, MovieListIViewHolder>(DiffUtilCallback) {
+class MovieListAdapter(
+    private val onMovieClickedCallback: (Movie) -> Unit
+) : ListAdapter<Movie, MovieListIViewHolder>(DiffUtilCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieListIViewHolder {
         return MovieListIViewHolder.inflate(parent)
@@ -13,7 +15,8 @@ class MovieListAdapter : ListAdapter<Movie, MovieListIViewHolder>(DiffUtilCallba
 
     override fun onBindViewHolder(holder: MovieListIViewHolder, position: Int) {
         holder.bind(
-            currentList[position]
+            currentList[position],
+            onMovieClickedCallback
         )
     }
 

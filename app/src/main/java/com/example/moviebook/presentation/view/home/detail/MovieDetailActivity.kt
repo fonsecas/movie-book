@@ -1,5 +1,7 @@
-package com.example.moviebook.presentation.view.home
+package com.example.moviebook.presentation.view.home.detail
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.GridLayoutManager
@@ -12,45 +14,37 @@ import com.framework.desafio.android.presentation.util.base.BaseViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 
 
-class MainActivity : BaseActivity() {
+class MovieDetailActivity : BaseActivity() {
 
     override val baseViewModel: BaseViewModel get() = _viewModel
-    private val _viewModel: MainViewModel by viewModel()
+    private val _viewModel: MovieDetailViewModel by viewModel()
 
     private lateinit var binding: ActivityMainBinding
 
-    private lateinit var adapter: MovieListAdapter
+    private val intentMovie by lazy { intent.getSerializableExtra(MOVIE_EXTRA) as Movie }
+    private var movie: Movie? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        // Create a grid layout with two columns
-        // Create a grid layout with two columns
+        movie = intentMovie
 
-        setupAdapter()
     }
 
     override fun subscribeUi() {
         super.subscribeUi()
-        _viewModel.users.observe(this, ::onMoviesReceived)
+
     }
 
-    private fun setupAdapter() {
-        adapter = MovieListAdapter(
-            _viewModel::onMovieSelected
-        )
-        val layoutManager = GridLayoutManager(this, 2)
-        layoutManager.spanSizeLookup = object : SpanSizeLookup() {
-            override fun getSpanSize(position: Int): Int {
-                return if (position == 0) 1 else 1
+    companion object {
+        private const val MOVIE_EXTRA = "MOVIE_EXTRA"
+
+        fun createIntent(context: Context, movie: Movie): Intent {
+            return Intent(context, MovieDetailActivity::class.java).apply {
+                putExtra(MOVIE_EXTRA, movie)
             }
         }
-
-        binding.recyclerView.layoutManager = layoutManager
-        binding.recyclerView.adapter = adapter
     }
 
-    private fun onMoviesReceived(movieList: List<Movie>) {
-        adapter.submitList(movieList)
-    }
 }
