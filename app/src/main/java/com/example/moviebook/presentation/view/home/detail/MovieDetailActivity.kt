@@ -4,10 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.GridLayoutManager.SpanSizeLookup
+import com.bumptech.glide.Glide
 import com.example.moviebook.R
-import com.example.moviebook.databinding.ActivityMainBinding
+import com.example.moviebook.databinding.ActivityMovieDetailsBinding
 import com.example.moviebook.domain.entity.Movie
 import com.framework.desafio.android.presentation.util.base.BaseActivity
 import com.framework.desafio.android.presentation.util.base.BaseViewModel
@@ -19,7 +18,7 @@ class MovieDetailActivity : BaseActivity() {
     override val baseViewModel: BaseViewModel get() = _viewModel
     private val _viewModel: MovieDetailViewModel by viewModel()
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMovieDetailsBinding
 
     private val intentMovie by lazy { intent.getSerializableExtra(MOVIE_EXTRA) as Movie }
     private var movie: Movie? = null
@@ -27,14 +26,20 @@ class MovieDetailActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_movie_details)
         movie = intentMovie
-
+        setupUi()
     }
 
-    override fun subscribeUi() {
-        super.subscribeUi()
-
+    private fun setupUi() {
+        binding.title.text = movie?.title
+        binding.overview.text = movie?.overview
+        Glide
+            .with(binding.root.context)
+            .load("https://image.tmdb.org/t/p/original/${movie?.posterPath}")
+            .thumbnail()
+            .into(binding.banner)
+        binding.backButton.setOnClickListener { finish() }
     }
 
     companion object {

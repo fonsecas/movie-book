@@ -19,5 +19,6 @@
     <!--Info Movie -->
     <string name="tittle_label">Titulo: </string>
     <string name="rate_label">Nota: </string>
+    <string name="sinopse">SINOPSE: </string>
 
 </resources>

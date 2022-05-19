@@ -11,6 +11,7 @@ class AuthInterceptor : Interceptor {
         val queriedUrl = originalUrl
             .newBuilder()
             .addQueryParameter(API_KEY_QUERY_PARAMETER, BuildConfig.ACCESS_KEY)
+            .addQueryParameter(LANGUAGE_PARAMETER, PT_BR)
             .build()
         val queriedBuilder = chain.request().newBuilder().url(queriedUrl).build()
         return chain.proceed(queriedBuilder)
@@ -18,5 +19,7 @@ class AuthInterceptor : Interceptor {
 
     companion object {
         const val API_KEY_QUERY_PARAMETER = "api_key"
+        const val LANGUAGE_PARAMETER = "language"
+        const val PT_BR = "pt-BR"
     }
 }
