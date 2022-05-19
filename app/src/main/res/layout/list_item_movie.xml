@@ -6,57 +6,50 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_margin="4dp"
-        android:background="@drawable/rounded_corners">
+        android:background="@drawable/rounded_corners"
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/picture"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tittleLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/tittle_label"
-            android:textColor="@android:color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/picture" />
 
         <TextView
             android:id="@+id/tittle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:textColor="@android:color/black"
-            app:layout_constraintStart_toEndOf="@+id/tittleLabel"
-            app:layout_constraintTop_toBottomOf="@+id/picture"
-            tools:text="\@username" />
-        v
-
-        <TextView
-            android:id="@+id/rateLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/rate_label"
-            android:textColor="@android:color/black"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tittleLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/picture"
+            tools:text="\@username"
+            android:textAlignment="center"/>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/ic_baseline_star_rate_24"
+            app:layout_constraintEnd_toStartOf="@id/rate"
+            app:layout_constraintTop_toBottomOf="@+id/tittle"
+            app:layout_constraintBottom_toBottomOf="@id/rate"
+            app:tint="@color/yellow" />
 
         <TextView
             android:id="@+id/rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-
-            android:textColor="@android:color/black"
-            app:layout_constraintStart_toEndOf="@+id/rateLabel"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tittle"
             tools:text="Name Surname" />
     </androidx.constraintlayout.widget.ConstraintLayout>
