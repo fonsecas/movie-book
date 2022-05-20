@@ -23,5 +23,8 @@ trazendo assim uma informação basica sobre algum filme.
 - 
 # Prints
 
-![Screenshot_20220520-155912](https://user-images.githubusercontent.com/2872913/169602599-8b1a728d-dca1-46cf-b5f8-2aa790865090.png)
-![Screenshot_20220520-155927](https://user-images.githubusercontent.com/2872913/169602613-fa5214fc-cfc5-4afc-91e7-c4b218753791.png)
+| Catalogo de Filmes  | Detalhe do Filme  |
+| ------------------- | ------------------- |
+|  ![Screenshot_20220520-155912](https://user-images.githubusercontent.com/2872913/169603151-3b097750-f553-41a0-bf5f-b7832169ade8.png) |  ![Screenshot_20220520-155927](https://user-images.githubusercontent.com/2872913/169603172-d273a46a-c7d8-415b-a9db-2d474f419c04.png)
+ |
+
