@@ -20,4 +20,8 @@ trazendo assim uma informação basica sobre algum filme.
 - Retrofit
 - Koin
 - Glide
+- 
+# Prints
 
+![Screenshot_20220520-155912](https://user-images.githubusercontent.com/2872913/169602599-8b1a728d-dca1-46cf-b5f8-2aa790865090.png)
+![Screenshot_20220520-155927](https://user-images.githubusercontent.com/2872913/169602613-fa5214fc-cfc5-4afc-91e7-c4b218753791.png)
