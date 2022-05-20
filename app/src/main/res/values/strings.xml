@@ -21,4 +21,8 @@
     <string name="rate_label">Nota: </string>
     <string name="sinopse">SINOPSE: </string>
 
+    <!--Info Movie -->
+    <string name="popular_movie_tittle">Populares</string>
+    <string name="popular_movie_subtitle">Os queridinhos da galera</string>
+
 </resources>

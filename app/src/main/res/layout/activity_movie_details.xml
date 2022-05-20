@@ -56,6 +56,7 @@
             android:layout_marginTop="@dimen/spacing_16"
             android:textColor="@color/white"
             android:textSize="20dp"
+            android:fontFamily="@font/robotolightitalic"
             app:layout_constraintStart_toEndOf="@id/bannerContainer"
             app:layout_constraintTop_toTopOf="@+id/bannerContainer"
             tools:text="SONIC" />
@@ -92,7 +93,10 @@
             android:layout_marginStart="@dimen/spacing_16"
             android:layout_marginTop="@dimen/spacing_16"
             android:text="@string/sinopse"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/robotomediumitalic"
+
             app:layout_constraintTop_toBottomOf="@+id/bannerContainer" />
 
         <TextView
@@ -102,6 +106,7 @@
             android:layout_marginTop="@dimen/spacing_16"
             android:textSize="@dimen/spacing_16"
             android:paddingHorizontal="@dimen/spacing_16"
+            android:fontFamily="@font/robotothin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/sinopse" />

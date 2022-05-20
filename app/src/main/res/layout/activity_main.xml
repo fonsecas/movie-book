@@ -2,9 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -13,8 +15,33 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingTop="@dimen/spacing_12"
-                >
+                android:paddingTop="@dimen/spacing_12">
+
+                <TextView
+                    android:id="@+id/titlePopular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/popular_movie_tittle"
+                    android:fontFamily="@font/robotolight"
+                    android:textColor="@color/red"
+                    android:layout_marginStart="@dimen/spacing_16"
+                    android:textSize="@dimen/spacing_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/titleSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/popular_movie_subtitle"
+                    app:layout_constraintTop_toBottomOf="@+id/titlePopular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/spacing_16"
+                    android:fontFamily="@font/robotothinitalic"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:layout_marginTop="4dp"
+                    />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView"
@@ -24,12 +51,15 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/spacing_12"
+                    app:layout_constraintTop_toBottomOf="@+id/titleSubtitle"
                     tools:listitem="@layout/list_item_movie" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
+
         <com.example.moviebook.presentation.util.placeholder.PlaceholderView
             android:id="@+id/placeholder_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" /></FrameLayout>
+            android:layout_height="match_parent" />
+    </FrameLayout>
 </layout>
