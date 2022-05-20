@@ -22,7 +22,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/popular_movie_tittle"
-                    android:fontFamily="@font/robotolight"
+                    android:fontFamily="@font/robotomediumitalic"
                     android:textColor="@color/red"
                     android:layout_marginStart="@dimen/spacing_16"
                     android:textSize="@dimen/spacing_24"
