@@ -1,9 +1,8 @@
 package com.example.moviebook.data.client
 
-import com.example.moviebook.data.entity.ApiMovie
+import com.example.moviebook.data.entity.ApiMovieTrailerResponse
 import com.example.moviebook.data.entity.ApiMoviesList
 import com.example.moviebook.data.util.request.RequestHandler
-import com.example.moviebook.domain.entity.MoviesList
 
 class ApiClient constructor(
     private val apiService: ApiService
@@ -11,5 +10,9 @@ class ApiClient constructor(
 
     suspend fun getMovieList(): ApiMoviesList? {
         return makeRequest(apiService.getMovieList())
+    }
+
+    suspend fun getMovieTrailer(movieId: Int?): ApiMovieTrailerResponse? {
+        return makeRequest(apiService.getMovieTrailer(movieId))
     }
 }

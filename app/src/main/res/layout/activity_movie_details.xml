@@ -23,18 +23,17 @@
             android:layout_height="42dp"
             android:layout_marginStart="@dimen/spacing_16"
             android:layout_marginTop="@dimen/spacing_16"
+            android:alpha="0.8"
             android:src="@drawable/ic_baseline_arrow_back_24"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:alpha="0.8"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/bannerContainer"
             android:layout_width="170dp"
             android:layout_height="250dp"
-            android:layout_marginTop="@dimen/spacing_16"
             android:layout_marginStart="@dimen/spacing_16"
+            android:layout_marginTop="@dimen/spacing_16"
             android:elevation="10dp"
             app:cardCornerRadius="8dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,28 +51,48 @@
             android:id="@+id/shareButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_16"
+            android:layout_marginEnd="@dimen/spacing_16"
             android:src="@drawable/ic_baseline_share_24"
-            app:layout_constraintBottom_toBottomOf="@id/bannerContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgBackground" />
+
+        <TextView
+            android:id="@+id/trailerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_16"
+            android:layout_marginTop="@dimen/spacing_16"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/trailer_title_button"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:drawableStartCompat="@drawable/ic_baseline_play_arrow_24"
+            app:flow_verticalAlign="center"
             app:layout_constraintStart_toEndOf="@id/bannerContainer"
-            android:layout_marginStart="@dimen/spacing_16"/>
+            app:layout_constraintTop_toBottomOf="@+id/imgBackground" />
+
         <TextView
             android:id="@+id/detailButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/bannerContainer"
-            android:text="Ver detalhes"
             android:layout_marginTop="@dimen/spacing_16"
+            android:fontFamily="@font/robotomedium"
+            android:text="Ver detalhes"
+            app:layout_constraintEnd_toEndOf="@id/bannerContainer"
             app:layout_constraintStart_toStartOf="@id/bannerContainer"
-            app:layout_constraintEnd_toEndOf="@id/bannerContainer"/>
+            app:layout_constraintTop_toBottomOf="@id/bannerContainer" />
+
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_16"
             android:layout_marginTop="@dimen/spacing_16"
+            android:fontFamily="@font/robotolightitalic"
             android:textColor="@color/white"
             android:textSize="20dp"
-            android:fontFamily="@font/robotolightitalic"
             app:layout_constraintStart_toEndOf="@id/bannerContainer"
             app:layout_constraintTop_toTopOf="@+id/bannerContainer"
             tools:text="SONIC" />
@@ -109,10 +128,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_16"
             android:layout_marginTop="@dimen/spacing_16"
+            android:fontFamily="@font/robotomediumitalic"
             android:text="@string/sinopse"
+            android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            android:fontFamily="@font/robotomediumitalic"
 
             app:layout_constraintTop_toBottomOf="@+id/detailButton" />
 
@@ -121,9 +141,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_16"
-            android:textSize="@dimen/spacing_16"
-            android:paddingHorizontal="@dimen/spacing_16"
             android:fontFamily="@font/robotothin"
+            android:paddingHorizontal="@dimen/spacing_16"
+            android:textSize="@dimen/spacing_16"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/sinopse" />

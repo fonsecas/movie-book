@@ -9,9 +9,11 @@ import com.bumptech.glide.Glide
 import com.example.moviebook.R
 import com.example.moviebook.databinding.ActivityMovieDetailsBinding
 import com.example.moviebook.domain.entity.Movie
+import com.example.moviebook.domain.entity.MovieTrailer
 import com.example.moviebook.presentation.util.resource.IMAGE_URL_ORIGINAL
 import com.example.moviebook.presentation.util.resource.IMAGE_URL_W500
 import com.example.moviebook.presentation.util.resource.TMDB_MOVIE_URL
+import com.example.moviebook.presentation.util.resource.VIDEO_URL
 import com.framework.desafio.android.presentation.util.base.BaseActivity
 import com.framework.desafio.android.presentation.util.base.BaseViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -33,6 +35,11 @@ class MovieDetailActivity : BaseActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_movie_details)
         movie = intentMovie
         setupUi()
+    }
+
+    override fun subscribeUi() {
+        super.subscribeUi()
+        _viewModel.movieTrailer.observe(this, ::onTrailerReceived)
     }
 
     private fun setupUi() {
@@ -58,10 +65,16 @@ class MovieDetailActivity : BaseActivity() {
             backButton.setOnClickListener { finish() }
             detailButton.setOnClickListener { onDetailClicked(movie?.id) }
             shareButton.setOnClickListener { onShareClicked(movie?.id) }
+            trailerButton.setOnClickListener { _viewModel.getMovieTrailer(movie?.id) }
         }
 
     }
 
+    private fun onTrailerReceived(movieTrailer: MovieTrailer) {
+        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("${VIDEO_URL}${movieTrailer.key}"))
+        startActivity(browserIntent)
+
+    }
 
     private fun getYearDate(date: String?): String {
         val list = date?.split("-")

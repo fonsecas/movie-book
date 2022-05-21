@@ -21,9 +21,10 @@
     <!--Info Movie -->
     <string name="tittle_label">Titulo: </string>
     <string name="rate_label">Nota: </string>
-    <string name="sinopse">SINOPSE: </string>
+    <string name="sinopse">SINÓPSE: </string>
+    <string name="trailer_title_button">Ver trailer </string>
 
-    <!--Info Movie -->
+    <!--List Movie -->
     <string name="popular_movie_tittle">Populares</string>
     <string name="popular_movie_subtitle">Os queridinhos da galera</string>
 

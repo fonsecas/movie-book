@@ -51,7 +51,7 @@ dependencies {
     implementation "io.insert-koin:koin-android-scope:$koinVersion"
     implementation "io.insert-koin:koin-android-viewmodel:$koinVersion"
 
-// LiveData + ViewModel
+    // LiveData + ViewModel
     api "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
 
