@@ -24,15 +24,14 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        // Create a grid layout with two columns
-        // Create a grid layout with two columns
-
         setupAdapter()
     }
 
     override fun subscribeUi() {
         super.subscribeUi()
         _viewModel.users.observe(this, ::onMoviesReceived)
+        _viewModel.placeholder.observe(this) { binding.placeholderView.setPlaceholder(it) }
+
     }
 
     private fun setupAdapter() {

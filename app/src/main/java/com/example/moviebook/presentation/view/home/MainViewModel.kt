@@ -22,7 +22,7 @@ class MainViewModel constructor(
 
     private fun getMovieList() {
         launchDataLoad(onFailure = ::onFailure) {
-            getMovieList.execute().apply {
+            getMovieList.getMovieList().apply {
                 _users.value = this?.results
             }
         }

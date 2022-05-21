@@ -68,4 +68,7 @@ dependencies {
 
     // Glide
     implementation "com.github.bumptech.glide:glide:$glideVersion"
+
+    //Mockito
+    testImplementation 'org.mockito.kotlin:mockito-kotlin:3.2.0'
 }
