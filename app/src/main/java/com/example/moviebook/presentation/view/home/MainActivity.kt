@@ -31,7 +31,6 @@ class MainActivity : BaseActivity() {
         super.subscribeUi()
         _viewModel.users.observe(this, ::onMoviesReceived)
         _viewModel.placeholder.observe(this) { binding.placeholderView.setPlaceholder(it) }
-
     }
 
     private fun setupAdapter() {

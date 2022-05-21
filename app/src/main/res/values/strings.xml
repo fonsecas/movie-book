@@ -16,6 +16,8 @@
     <string name="global_send">Enviar</string>
     <string name="global_error">Erro</string>
     <string name="global_cancel">Cancelar</string>
+    <string name="share_movie">Compartilhar filme</string>
+
     <!--Info Movie -->
     <string name="tittle_label">Titulo: </string>
     <string name="rate_label">Nota: </string>

@@ -48,6 +48,23 @@
                 android:layout_marginBottom="4dp" />
         </androidx.cardview.widget.CardView>
 
+        <ImageView
+            android:id="@+id/shareButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_share_24"
+            app:layout_constraintBottom_toBottomOf="@id/bannerContainer"
+            app:layout_constraintStart_toEndOf="@id/bannerContainer"
+            android:layout_marginStart="@dimen/spacing_16"/>
+        <TextView
+            android:id="@+id/detailButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/bannerContainer"
+            android:text="Ver detalhes"
+            android:layout_marginTop="@dimen/spacing_16"
+            app:layout_constraintStart_toStartOf="@id/bannerContainer"
+            app:layout_constraintEnd_toEndOf="@id/bannerContainer"/>
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
@@ -97,7 +114,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:fontFamily="@font/robotomediumitalic"
 
-            app:layout_constraintTop_toBottomOf="@+id/bannerContainer" />
+            app:layout_constraintTop_toBottomOf="@+id/detailButton" />
 
         <TextView
             android:id="@+id/overview"
@@ -110,5 +127,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/sinopse" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
