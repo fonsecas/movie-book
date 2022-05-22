@@ -20,7 +20,13 @@ trazendo assim uma informação basica sobre algum filme.
 - Retrofit
 - Koin
 - Glide
-- 
+
+# Funcionalidades:
+
+- Compartilhar filme com amigos
+- Assitir o Trailer de um filme
+- Ver informação completa de um filme no TMDB
+
 # Prints
 
 | Catalogo de Filmes  | Detalhe do Filme  |

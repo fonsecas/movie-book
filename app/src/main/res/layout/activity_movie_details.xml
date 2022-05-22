@@ -22,7 +22,7 @@
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:layout_marginStart="@dimen/spacing_16"
-            android:layout_marginTop="@dimen/spacing_16"
+            android:layout_marginTop="@dimen/spacing_48"
             android:alpha="0.8"
             android:src="@drawable/ic_baseline_arrow_back_24"
             app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +46,18 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="4dp" />
         </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/easterEggButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_16"
+            android:layout_marginEnd="@dimen/spacing_16"
+            android:src="@drawable/ic_easter_egg"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/shareButton"
+            app:layout_constraintTop_toBottomOf="@id/imgBackground"
+            app:tint="@color/white" />
 
         <ImageView
             android:id="@+id/shareButton"
@@ -86,13 +98,17 @@
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_16"
             android:layout_marginTop="@dimen/spacing_16"
+            android:layout_marginEnd="@dimen/spacing_16"
+            android:layout_weight="1"
             android:fontFamily="@font/robotolightitalic"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="18sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/bannerContainer"
             app:layout_constraintTop_toTopOf="@+id/bannerContainer"
             tools:text="SONIC" />

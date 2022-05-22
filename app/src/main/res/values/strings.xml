@@ -2,6 +2,7 @@
     <string name="app_name">Movie Book</string>
     <string name="title">Contatos</string>
     <string name="error">Ocorreu um erro. Tente novamente.</string>
+
     <!--Error Strings-->
     <string name="error_title">Oops!</string>
     <string name="error_unauthorized">Não pudemos completar a operação. Você não está autorizado</string>
@@ -17,6 +18,7 @@
     <string name="global_error">Erro</string>
     <string name="global_cancel">Cancelar</string>
     <string name="share_movie">Compartilhar filme</string>
+    <string name="easter_egg_toast">Parabéns! Você liberou o Easter Egg do Ifood</string>
 
     <!--Info Movie -->
     <string name="tittle_label">Titulo: </string>
@@ -27,5 +29,4 @@
     <!--List Movie -->
     <string name="popular_movie_tittle">Populares</string>
     <string name="popular_movie_subtitle">Os queridinhos da galera</string>
-
 </resources>
