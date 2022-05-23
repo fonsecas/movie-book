@@ -15,7 +15,7 @@ import com.example.moviebook.domain.entity.MovieTrailer
 import com.example.moviebook.presentation.util.extensions.makeStatusBarTransparent
 import com.example.moviebook.presentation.util.resource.*
 import com.framework.desafio.android.presentation.util.base.BaseActivity
-import com.framework.desafio.android.presentation.util.base.BaseViewModel
+import com.example.moviebook.presentation.util.base.BaseViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 
 

@@ -1,4 +1,4 @@
-package com.framework.desafio.android.presentation.util.base
+package com.example.moviebook.presentation.util.base
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

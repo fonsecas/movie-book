@@ -2,6 +2,7 @@ package com.framework.desafio.android.presentation.util.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.moviebook.presentation.util.base.BaseViewModel
 import com.example.moviebook.presentation.util.navigation.NavData
 
 abstract class BaseActivity : AppCompatActivity() {

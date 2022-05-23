@@ -4,12 +4,12 @@ package com.example.moviebook.presentation.view.home
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.moviebook.domain.entity.Movie
-import com.example.moviebook.domain.interector.GetMovieList
+import com.example.moviebook.domain.interector.IGetMovieList
 import com.example.moviebook.presentation.view.home.detail.MovieDetailsNavData
-import com.framework.desafio.android.presentation.util.base.BaseViewModel
+import com.example.moviebook.presentation.util.base.BaseViewModel
 
 class MainViewModel constructor(
-    private val getMovieList: GetMovieList
+    private val getMovieList: IGetMovieList
 ) : BaseViewModel() {
 
     val users: LiveData<List<Movie>> get() = _users
@@ -20,7 +20,7 @@ class MainViewModel constructor(
         getMovieList()
     }
 
-    private fun getMovieList() {
+     fun getMovieList() {
         launchDataLoad(onFailure = ::onFailure) {
             getMovieList.getMovieList().apply {
                 _users.value = this?.results

@@ -8,7 +8,7 @@ import com.example.moviebook.R
 import com.example.moviebook.databinding.ActivityMainBinding
 import com.example.moviebook.domain.entity.Movie
 import com.framework.desafio.android.presentation.util.base.BaseActivity
-import com.framework.desafio.android.presentation.util.base.BaseViewModel
+import com.example.moviebook.presentation.util.base.BaseViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 
 

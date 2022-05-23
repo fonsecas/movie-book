@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.moviebook.domain.entity.MovieTrailer
 import com.example.moviebook.domain.interector.GetMovieTrailer
-import com.framework.desafio.android.presentation.util.base.BaseViewModel
+import com.example.moviebook.presentation.util.base.BaseViewModel
 
 class MovieDetailViewModel constructor(
     private val getMovieTrailer: GetMovieTrailer
