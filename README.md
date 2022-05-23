@@ -1,3 +1,8 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
+
 # Problematica:
 
  - Consumir uma api de filmes, para atravez de um app, trazer um catalogo de filmes e seus detalhes,
@@ -11,6 +16,13 @@ trazendo assim uma informação basica sobre algum filme.
 - Ultilização do Koin para injeção de dependencia
 - Criei um Interceptor para cachear as requests feitas pelo Retrofit.
 - Consumindo a API do TMDB usando Retrofit
+- ### Testes
+    - Testes unitários na camada de presentation, domain e data. Na camada da presentation os
+       testes foram realizados na ViewModel visando garantir que os sinais disparados eram iguais aos esperados.
+    - Já na camada de domain, os testes foram feitos nos interactors. Essa escolha foi motivada pelo fato deles 
+       representarem a regra de negócio da aplicação.
+    - E por último, na camada do data, os testes foram feitos nos mappers e nos repositorys.
+
 
 # Tecnologias e Conceitos Ultilizadas:
 
@@ -18,7 +30,9 @@ trazendo assim uma informação basica sobre algum filme.
 - MVVM
 - Jetpack Components
 - Retrofit
+- TMDB API
 - Koin
+- Mockito
 - Glide
 
 # Funcionalidades:
