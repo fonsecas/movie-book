@@ -4,7 +4,6 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.example.moviebook.domain.CoroutinesTestRule
 import com.example.moviebook.domain.entity.Movie
-import com.example.moviebook.domain.interector.GetMovieList
 import com.example.moviebook.domain.interector.IGetMovieList
 import com.example.moviebook.presentation.view.home.MainViewModel
 import com.example.moviebook.src.movieList
@@ -15,11 +14,11 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.koin.core.context.startKoin
 import org.mockito.Mock
 import org.mockito.Mockito.`when`
 import org.mockito.Mockito.verify
 import org.mockito.junit.MockitoJUnitRunner
-
 
 @RunWith(MockitoJUnitRunner::class)
 internal class MainViewModelTest {
@@ -41,6 +40,7 @@ internal class MainViewModelTest {
 
     @Before
     fun start() {
+        startKoin { }
         viewModel = MainViewModel(
             interector
         ).apply {
@@ -51,8 +51,8 @@ internal class MainViewModelTest {
 
     //  |  Casos |                     Descrição                                              |
     //  |:-------|:---------------------------------------------------------------------------|
-    //  | Caso 3 |   Dado um usuário acessando a listagem de usuários                         |
-    //  |        |   Quando ele solicitar pelos usuários                                      |
+    //  | Caso 3 |   Dado um usuário acessando a listagem de filmes                         |
+    //  |        |   Quando ele solicitar pelos filmes                                      |
     //  |        |   Então devemos assegurar que o sinal disparado é igual ao esperado        |
 
     @Test
@@ -66,5 +66,4 @@ internal class MainViewModelTest {
             verify(viewStateObserver).onChanged(movieListMock)
         }
     }
-
 }
