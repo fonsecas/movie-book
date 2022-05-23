@@ -25,6 +25,7 @@ trazendo assim uma informação basica sobre algum filme.
 - MVVM
 - Jetpack Components
 - Retrofit
+- TMDB API
 - Koin
 - Mockito
 - Glide
