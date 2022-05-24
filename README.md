@@ -27,6 +27,7 @@ trazendo assim uma informação basica sobre algum filme.
 
 - Clean Architecture
 - MVVM
+- Clean Code
 - Jetpack Components
 - Retrofit
 - TMDB API
