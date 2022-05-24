@@ -44,6 +44,6 @@ trazendo assim uma informação basica sobre algum filme.
 
 | Catalogo de Filmes  | Detalhe do Filme  |
 | ------------------- | ------------------- |
-|  ![Screenshot_20220520-155912](https://user-images.githubusercontent.com/2872913/169603151-3b097750-f553-41a0-bf5f-b7832169ade8.png) |  ![Screenshot_20220520-155927](https://user-images.githubusercontent.com/2872913/169603172-d273a46a-c7d8-415b-a9db-2d474f419c04.png)
- |
+|  ![Screenshot_20220520-155912](https://user-images.githubusercontent.com/2872913/169603151-3b097750-f553-41a0-bf5f-b7832169ade8.png) | ![Screenshot_20220524-094458](https://user-images.githubusercontent.com/2872913/170052393-3e85d5ff-7326-4b32-acb1-8620c6e38c6c.png)
+
 
