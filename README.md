@@ -14,7 +14,6 @@ trazendo assim uma informação basica sobre algum filme.
 - Aplicação da arquitetura MVVM na camada presentation
 - Utilização do Jetpack Components (View Model, Data Binding, Lifecycle, LiveData)
 - Ultilização do Koin para injeção de dependencia
-- Criei um Interceptor para cachear as requests feitas pelo Retrofit.
 - Consumindo a API do TMDB usando Retrofit
 - ### Testes
     - Testes unitários na camada de presentation, domain e data. Na camada da presentation os
